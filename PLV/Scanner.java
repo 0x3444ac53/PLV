@@ -57,22 +57,28 @@ public class Scanner {
             case ')':
                 addToken(RIGHT_PAREN);
                 break;
+                // Start copy below this for table gen
             case '&':
+            case '∧':
                 addToken(AND);
                 break;
             case '↔':
+            case '⇔':
                 addToken(IFF);
                 break;
             case '~':
             case '∼':
+            case '¬':
                 addToken(NOT);
                 break;
             case '→':
+            case '⇒':
                 addToken(IF);
                 break;
             case '∨':
                 addToken(OR);
                 break;
+            // end copy for tablr here
             case ' ':
             case '\r':
             case '\t':
