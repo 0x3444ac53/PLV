@@ -60,10 +60,13 @@ public class Scanner {
                 // Start copy below this for table gen
             case '&':
             case '∧':
+            case '·':
                 addToken(AND);
                 break;
             case '↔':
             case '⇔':
+            case '≡':
+            case '!':
                 addToken(IFF);
                 break;
             case '~':
@@ -73,9 +76,12 @@ public class Scanner {
                 break;
             case '→':
             case '⇒':
+            case '⊃':
                 addToken(IF);
                 break;
             case '∨':
+            case '+':
+            case '∥':
                 addToken(OR);
                 break;
             // end copy for tablr here

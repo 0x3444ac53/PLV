@@ -11,13 +11,13 @@ _There is currently a known bug where you REPL must be restarted on Error_
 
 ### Current supported symbols and operations
 
-| **Operations** |      |      |      |
-| -------------- | ---- | ---- | ---- |
-| **AND**        | &    | ∧    |      |
-| **IFF**        | ↔    | ⇔    |      |
-| **NOT**        | ~    | ∼    | ¬    |
-| **IF**         | →    | ⇒    |      |
-| **OR**         | ∨    |      |      |
+| **Operations** | --   | --   | --   | --   |
+| -------------- | ---- | ---- | ---- | ---- |
+| **AND**        | &    | ∧    | ·    |      |
+| **IFF**        | ↔    | ⇔    | ≡    | !    |
+| **NOT**        | ~    | ∼    | ¬    |      |
+| **IF**         | →    | ⇒    | ⊃    |      |
+| **OR**         | ∨    | +    | ∥    |      |
 
 ### Demo
 
