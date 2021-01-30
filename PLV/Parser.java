@@ -89,7 +89,7 @@ public class Parser {
             consume(RIGHT_PAREN, "Expect ')' after sentence.");
             return new Sentence.Complex(sentence);
         }
-        return null;
+        return null; //Should be unreachable
     }
     
     private boolean match(TokenType... types) {

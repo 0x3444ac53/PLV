@@ -76,9 +76,6 @@ public class PLV {
             return;
         }
         System.out.println(new AstPrinter().print(sentence));
-        for (Token token : tokens) {
-            System.out.println(token.type);
-        }
     }
 
     static void error(int line, String message) {

@@ -64,6 +64,7 @@ public class Scanner {
                 addToken(IFF);
                 break;
             case '~':
+            case '∼':
                 addToken(NOT);
                 break;
             case '→':
@@ -82,7 +83,7 @@ public class Scanner {
                 break;
             default:
                 if (isAlpha(c)) {
-                    addToken(ATOMIC);
+                    addToken(ATOMIC, c);
                 } else {
                     PLV.error(line, "Unexpected charecter");
                 }
