@@ -129,9 +129,7 @@ public class Scanner {
     }
 
     private boolean isAlpha(char c) {
-        return (c >= 'a' && c <= 'z')
-                || (c >= 'A' && c <= 'Z')
-                || c == '_';
+        return (c >= 'A' && c <= 'Z');
     }
 
     private char advance() {
