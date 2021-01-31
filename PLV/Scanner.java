@@ -18,18 +18,7 @@ public class Scanner {
     private final String source;
     private final List<Token> tokens = new ArrayList<>();
     private int start = 0, current = 0, line = 1;
-    //private static final Map<String, TokenType> keywords;
 
-    /*
-    static {
-        keywords = new HashMap<>();
-        keywords.put("∨", OR);
-        keywords.put("&", AND);
-        keywords.put("→", IF);
-        keywords.put("~", NOT);
-        keywords.put("↔", IFF);
-    }
-    */
     Scanner(String source) {
         this.source = source;
     }
