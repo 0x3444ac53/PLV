@@ -15,17 +15,32 @@ public class AstPrinter implements Sentence.Visitor<String> {
         return expr.accept(this);
     }
 
+    /**
+     *
+     * @param expr
+     * @return
+     */
     @Override
     public String visitBinarySentence(Sentence.Binary expr) {
         return parenthesize(expr.operator.lexeme,
                 expr.left, expr.right);
     }
 
+    /**
+     *
+     * @param expr
+     * @return
+     */
     @Override
     public String visitComplexSentence(Sentence.Complex expr) {
         return parenthesize("group", expr.sentence);
     }
 
+    /**
+     *
+     * @param expr
+     * @return
+     */
     @Override
     public String visitAtomicSentence(Sentence.Atomic expr) {
         if (expr.value == null) {
@@ -34,6 +49,11 @@ public class AstPrinter implements Sentence.Visitor<String> {
         return expr.value.toString();
     }
 
+    /**
+     *
+     * @param expr
+     * @return
+     */
     @Override
     public String visitUnarySentence(Sentence.Unary expr) {
         return parenthesize(expr.operator.lexeme, expr.right);
@@ -52,6 +72,10 @@ public class AstPrinter implements Sentence.Visitor<String> {
     return builder.toString();
   }
     
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         Sentence sentence = new Sentence.Binary(
                 new Sentence.Unary(

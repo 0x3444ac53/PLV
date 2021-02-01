@@ -3,9 +3,6 @@ package com.craftinginterpreters.PLV;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -19,14 +16,16 @@ public class PLV {
     /**
      *
      * @param args
-     * @throws IOException
      */
-    public static void main(String[] args) throws IOException {
-        if (args.length > 1) {
-            System.out.println("Usage: jlox [script]");
+    public static void main(String[] args) {
+        for (String a : args) {
+            System.out.println(a);
+        }
+        if (args.length != 2) {
+            System.out.println("Usage: PLV [-c expression] ");
             System.exit(64);
-        } else if (args.length == 1) {
-            runFile(args[0]);
+        } else if (args.length == 2) {
+            runLine(args[1]);
         } else {
             runPrompt();
         }
@@ -34,12 +33,10 @@ public class PLV {
 
     /**
      *
-     * @param path
-     * @throws IOException
+     * @param sentence
      */
-    public static void runFile(String path) throws IOException {
-        byte[] bytes = Files.readAllBytes(Paths.get(path));
-        run(new String(bytes, Charset.defaultCharset()));
+    public static void runLine(String sentence) {
+        run(sentence);
         if (hadError) {
             System.exit(65);
         }
